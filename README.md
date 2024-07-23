@@ -2,7 +2,7 @@
 
 ## 🌐 Explore Global Traffic Routing with Google Cloud Load Balancer
 
-Welcome to the automated demo script for exploring Google Cloud Service Mesh with Multi Cluster Ingress (MCI) feature enabled. This demo showcases the powerful global traffic routing capabilities of the Google Cloud Load Balancer, allowing you to experience firsthand how modern cloud infrastructure can optimize application delivery on a global scale.
+Welcome to this fully automated demo script for exploring Google Cloud Service Mesh with Multi Cluster Ingress (MCI) feature enabled. This demo showcases the powerful global traffic routing capabilities of the Google Cloud Load Balancer, allowing you to experience firsthand how modern cloud infrastructure can optimize application delivery on a global scale.
 
 ### 🚀 What This Demo Offers
 
