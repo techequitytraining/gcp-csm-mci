@@ -1,4 +1,4 @@
-# Google Cloud Service Mesh with Multi Cluster Ingress Demo
+# Google Cloud Service Mesh with Multi Cluster Ingress Demo Script
 
 ## 🌐 Explore Global Traffic Routing with Google Cloud Load Balancer
 
