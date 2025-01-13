@@ -418,10 +418,10 @@ if [ $MODE -eq 1 ]; then
     export STEP="${STEP},3i(${i})"   
     if [ "$i" -eq 1 ]; then
         echo
-        echo "$ gcloud beta container clusters create \$CLUSTER_NAME --zone \$CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=\${WORKLOAD_POOL} --labels=mesh_id=\${MESH_ID},location=\$CLUSTER_LOCATION --spot --project \$PROJECT_ID # to create cluster" | pv -qL 100
+        echo "$ gcloud beta container clusters create \$CLUSTER_NAME --zone \$CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=\${WORKLOAD_POOL} --labels=mesh_id=\${MESH_ID},location=\$CLUSTER_LOCATION --spot --gateway-api=standard --project \$PROJECT_ID # to create cluster" | pv -qL 100
     else
         echo
-        echo "$ gcloud beta container clusters create \$CLUSTER_NAME --zone \$CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=\${WORKLOAD_POOL} --labels=mesh_id=\${MESH_ID},location=\$CLUSTER_LOCATION --spot --project \$PROJECT_ID # to create cluster" | pv -qL 100
+        echo "$ gcloud beta container clusters create \$CLUSTER_NAME --zone \$CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=\${WORKLOAD_POOL} --labels=mesh_id=\${MESH_ID},location=\$CLUSTER_LOCATION --spot --gateway-api=standard --project \$PROJECT_ID # to create cluster" | pv -qL 100
     fi
     echo
     echo "$ kubectl config use-context \$CTX # to set context" | pv -qL 100
@@ -468,11 +468,11 @@ elif [ $MODE -eq 2 ]; then
     gcloud config set compute/zone $ZONE > /dev/null 2>&1
     if [ "$i" -eq 1 ]; then
         echo
-        echo "$ gcloud beta container clusters create $CLUSTER_NAME --zone $CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=${WORKLOAD_POOL} --labels=mesh_id=${MESH_ID},location=$CLUSTER_LOCATION --spot --project $PROJECT_ID # to create cluster" | pv -qL 100
+        echo "$ gcloud beta container clusters create $CLUSTER_NAME --zone $CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=${WORKLOAD_POOL} --labels=mesh_id=${MESH_ID},location=$CLUSTER_LOCATION --spot --gateway-api=standard --project $PROJECT_ID # to create cluster" | pv -qL 100
         gcloud beta container clusters create $CLUSTER_NAME --zone $CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=${WORKLOAD_POOL} --labels=mesh_id=${MESH_ID},location=$CLUSTER_LOCATION --spot --project $PROJECT_ID
     else
         echo
-        echo "$ gcloud beta container clusters create $CLUSTER_NAME --zone $CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=${WORKLOAD_POOL} --labels=mesh_id=${MESH_ID},location=$CLUSTER_LOCATION --spot --project $PROJECT_ID # to create cluster" | pv -qL 100
+        echo "$ gcloud beta container clusters create $CLUSTER_NAME --zone $CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=${WORKLOAD_POOL} --labels=mesh_id=${MESH_ID},location=$CLUSTER_LOCATION --spot --gateway-api=standard --project $PROJECT_ID # to create cluster" | pv -qL 100
         gcloud beta container clusters create $CLUSTER_NAME --zone $CLUSTER_ZONE --machine-type e2-standard-2 --num-nodes 4 --spot --workload-pool=${WORKLOAD_POOL} --labels=mesh_id=${MESH_ID},location=$CLUSTER_LOCATION --spot --project $PROJECT_ID
     fi
     echo
